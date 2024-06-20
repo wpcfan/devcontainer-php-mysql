@@ -5,15 +5,24 @@
             "name": "Launch application",
             "type": "php",
             "request": "launch",
-            "program": "${workspaceFolder}/index.php",
-            "cwd": "${workspaceFolder}",
-            "port": 8080
+            "runtimeArgs": [
+                "-S",
+                "0.0.0.0:8000",
+                "-t",
+                "public"
+            ],
+            "port": 9000,
+            "serverReadyAction": {
+                "pattern": "listening on port ([0-9]+)",
+                "uriFormat": "http://localhost:%s",
+                "action": "openExternally"
+            }
         },
         {
             "name": "Listen for XDebug",
             "type": "php",
             "request": "launch",
-            "port": 8080
+            "port": 9000
         },
         {
             "name": "Launch currently open script",
@@ -21,7 +30,7 @@
             "request": "launch",
             "program": "${file}",
             "cwd": "${fileDirname}",
-            "port": 8080
+            "port": 9000
         }
     ]
 }

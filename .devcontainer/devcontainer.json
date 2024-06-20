@@ -21,7 +21,11 @@
       "settings": {
         "php.validate.executablePath": "/usr/local/bin/php",
         "php.validate.run": "onSave"
-      }
+      },
+      // Add the IDs of extensions you want installed when the container is created.
+      "extensions": [
+        "DEVSENSE.phptools-vscode"
+      ]
     }
   }
 
