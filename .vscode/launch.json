@@ -8,8 +8,6 @@
             "runtimeArgs": [
                 "-S",
                 "0.0.0.0:8000",
-                "-t",
-                "public"
             ],
             "port": 9000,
             "serverReadyAction": {
